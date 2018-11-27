@@ -1,4 +1,4 @@
-FROM dnhsoft/shopware-base:5.2.x-php7
+FROM marcusfellinger/shopware-base:5.5.x-php7.2
 
 COPY assets/configs-default.php /shopware/engine/Shopware/Configs/Default.php
 
@@ -14,3 +14,5 @@ ENV SWHTTPCACHE_ALLOW_REVALIDATE 0
 ENV SWHTTPCACHE_STALE_WHILE_REVALIDATE 2
 ENV SWHTTPCACHE_STALE_IF_ERROR 0
 ENV SWHTTPCACHE_CACHE_COOKIES "shop|currency|x-cache-context-hash"
+
+LABEL maintainer="docker@felliweb.de"
